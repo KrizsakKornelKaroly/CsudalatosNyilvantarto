@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CsudalatosNyilvantarto"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="800"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style x:Key="navGombok" TargetType="Button">
+            <Setter Property="Background" Value="HotPink"></Setter>
+            <Setter Property="BorderThickness"
+                    Value="0"></Setter>
+            <Setter Property="Padding"
+                    Value="8"></Setter>
+            <Setter Property="Foreground" Value="white"></Setter>
+            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontWeight" Value="Bold"></Setter>
+        </Style>
+        
+    </Window.Resources>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Left" Width="200">
+            <Button Style="{StaticResource navGombok}">Tankönyvek</Button>
+            <Button Style="{StaticResource navGombok}">Füzetek</Button>
+            <Button Style="{StaticResource navGombok}">Íróeszközök</Button>
+            <Button Style="{StaticResource navGombok}">Egyebek</Button>
+            <Button Style="{StaticResource navGombok}">Korhatáros tartalom</Button>
+            <DockPanel>
+                <StackPanel Margin="0, 100, 0, 0">
+                    <Button Style="{StaticResource navGombok}">Mink</Button>
+                    <Button Click="Button_Click" Background="Red" Foreground="White" FontWeight="Bold">Szájonárá</Button>
+                </StackPanel>
+            </DockPanel>
+        </StackPanel>
+        
+        <StackPanel></StackPanel>
+    </DockPanel>
 </Window>
