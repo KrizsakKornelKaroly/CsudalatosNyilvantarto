@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         WindowStyle="None"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
     <Window.Resources>
         <Style x:Key="navGombok" TargetType="Button">
             <Setter Property="Background" Value="HotPink"></Setter>
@@ -20,18 +21,20 @@
             <Setter Property="FontWeight" Value="Bold"></Setter>
         </Style>
         
+        
     </Window.Resources>
     <DockPanel>
         <StackPanel DockPanel.Dock="Left" Width="200">
             <Button Style="{StaticResource navGombok}">Tankönyvek</Button>
             <Button Style="{StaticResource navGombok}">Füzetek</Button>
-            <Button Style="{StaticResource navGombok}">Íróeszközök</Button>
+            <Button Style="{StaticResource navGombok}">Írószerek</Button>
             <Button Style="{StaticResource navGombok}">Egyebek</Button>
-            <Button Style="{StaticResource navGombok}">Korhatáros tartalom</Button>
+            <Button Style="{StaticResource navGombok}" Click="NSFWButton_Click">Korhatáros tartalom</Button>
+            <Image Source="Images/bigyofelugyelo.jpg"></Image>
             <DockPanel>
-                <StackPanel Margin="0, 100, 0, 0">
+                <StackPanel Margin="0, -78, 0, 0">
                     <Button Style="{StaticResource navGombok}">Mink</Button>
-                    <Button Click="Button_Click" Background="Red" Foreground="White" FontWeight="Bold">Szájonárá</Button>
+                    <Button Click="Button_Click" Background="Red" Foreground="White" FontWeight="Bold" Padding="8" BorderThickness="0">Szájonárá</Button>
                 </StackPanel>
             </DockPanel>
         </StackPanel>

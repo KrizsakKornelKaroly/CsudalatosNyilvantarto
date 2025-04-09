@@ -25,5 +25,12 @@ namespace CsudalatosNyilvantarto
         {
             Application.Current.Shutdown();
         }
+
+        private async void NSFWButton_Click(object sender, RoutedEventArgs e)
+        {
+            KorhatarosAblak korhataros = new KorhatarosAblak();
+            korhataros.Show();
+            
+        }
     }
 }
